@@ -1,9 +1,12 @@
+var player;
 
 var dots = [];
 var dSize = 10;
 
 function setup() {
   createCanvas(800,500);
+
+  player = new Player;
 
   for(let y = dSize/2; y<height; y+=dSize*2){
     dots.push(createVector(width/2-dSize/2, y));
@@ -17,7 +20,9 @@ function draw(){
 
   noStroke();
   fill(255);
-  drawSquares
+  drawSquares();
+
+  player.show();
 }
 
 
