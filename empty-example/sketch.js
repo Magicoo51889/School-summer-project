@@ -22,6 +22,8 @@ function draw(){
   fill(255);
   drawSquares();
 
+
+  player.update();
   player.show();
 }
 
@@ -32,5 +34,19 @@ function drawSquares(){
     let x = dots[i].y;
 
     rect(x, y, dSize, dSize);
+  }
+}
+
+function keyPressed(){
+  if(key == 'W' || keyCode == UP_ARROW){
+    player.up();
+  }else if (key == 'S' || keyCode==DOWN_ARROW){
+    player.down();
+  }
+}
+
+fucntion keyReleased(){
+  if((key == 'W' || keyCode == UP_ARROW) || (key == 'S' || keyCode==DOWN_ARROW){
+    player.stp();
   }
 }

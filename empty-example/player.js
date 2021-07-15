@@ -15,12 +15,12 @@ function Player(){
 
   this.up = function(){this.acc.y-=this.spd;}
   this.down = function(){this.acc.y+=this.spd;}
-  this.stop = function(){this.acc.y = 0;}
+  this.stp = function(){this.acc.y = 0;}
 
   this.update = fucntion(){
     this.acc.y = constrain(this.y, -this.maxSpd, this.maxSpd);
     this.pos.add(this.acc);
     this.pos.y = constrain(this.pos.y, 0, height-this.h);
-    
+
   }
 }
