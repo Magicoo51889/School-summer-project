@@ -1,4 +1,4 @@
-var player, ball;
+var player, ball, ai;
 
 
 var playerScore = 0;
@@ -12,6 +12,7 @@ function setup(){
   createCanvas(800,500);
 
   player = new Player;
+  ai = new AI();
   ball = new Ball();
 
 
@@ -29,12 +30,14 @@ function draw(){
   fill(255, 100);
   drawSquares();
 
+  ball.update();
+  ball.show();
 
   player.update();
   player.show();
 
-  ball.update();
-  ball.show();
+  ai.update();
+  ai.show();
 
   drawScores();
 }
