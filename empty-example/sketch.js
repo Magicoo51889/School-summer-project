@@ -9,11 +9,12 @@ var dots = [];
 var dSize = 10;
 var txtSize = 30;
 
+var go = false;
 
 function setup(){
   createCanvas(800,500);
 
-  player = new Player;
+  player = new Player();
   ai = new AI();
   ball = new Ball();
 
@@ -30,16 +31,21 @@ function draw(){
   fill(255, 100);
   drawSquares();
 
-  ball.update();
+  if (go){
+    ball.edges();
+    ball.update();
+    player.update();
+    ai.update();
+    ball.scores();
+  }
+
   ball.show();
-
-  player.update();
   player.show();
-
-  ai.update();
   ai.show();
 
   drawScores();
+}
+
 }
 
 
@@ -68,6 +74,7 @@ function drawSquares(){
 
 
 function keyPressed(){
+  go = true;
   if(key == 'W' || keyCode == UP_ARROW){
     player.up();
   }else if (key == 'S' || keyCode==DOWN_ARROW){
