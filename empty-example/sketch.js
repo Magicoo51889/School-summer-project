@@ -4,9 +4,11 @@ var player, ball, ai;
 var playerScore = 0;
 var AIScore = 0;
 
+
 var dots = [];
 var dSize = 10;
 var txtSize = 30;
+
 
 function setup(){
   createCanvas(800,500);
@@ -15,11 +17,9 @@ function setup(){
   ai = new AI();
   ball = new Ball();
 
-
   for(let y = dSize/2; y<height; y+=dSize*2){
     dots.push(createVector(width/2-dSize/2, y));
   }
-
 }
 
 
@@ -42,6 +42,7 @@ function draw(){
   drawScores();
 }
 
+
 function drawScores(){
   let x1 = width/4;
   let x2 = width*3/4;
@@ -55,6 +56,7 @@ function drawScores(){
   text(AIScore, x2, y);
 }
 
+
 function drawSquares(){
   for(let i - 0; i<dots.length; i++){
     let x = dots[i].x;
@@ -64,6 +66,7 @@ function drawSquares(){
   }
 }
 
+
 function keyPressed(){
   if(key == 'W' || keyCode == UP_ARROW){
     player.up();
@@ -72,7 +75,8 @@ function keyPressed(){
   }
 }
 
-fucntion keyReleased(){
+
+function keyReleased(){
   if((key == 'W' || keyCode == UP_ARROW) || (key == 'S' || keyCode==DOWN_ARROW){
     player.stp();
   }

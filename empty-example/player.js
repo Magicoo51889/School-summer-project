@@ -21,6 +21,5 @@ function Player(){
     this.acc.y = constrain(this.y, -this.maxSpd, this.maxSpd);
     this.pos.add(this.acc);
     this.pos.y = constrain(this.pos.y, 0, height-this.h);
-
   }
 }
