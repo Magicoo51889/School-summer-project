@@ -46,8 +46,6 @@ function draw(){
   drawScores();
 }
 
-}
-
 
 function drawScores(){
   let x1 = width/4;
@@ -64,9 +62,9 @@ function drawScores(){
 
 
 function drawSquares(){
-  for(let i - 0; i<dots.length; i++){
+  for(let i = 0; i<dots.length; i++){
     let x = dots[i].x;
-    let x = dots[i].y;
+    let y = dots[i].y;
 
     rect(x, y, dSize, dSize);
   }
@@ -84,7 +82,7 @@ function keyPressed(){
 
 
 function keyReleased(){
-  if((key == 'W' || keyCode == UP_ARROW) || (key == 'S' || keyCode==DOWN_ARROW){
+  if((key == 'W' || keyCode == UP_ARROW) || (key == 'S' || keyCode==DOWN_ARROW)){
     player.stp();
   }
 }

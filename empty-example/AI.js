@@ -12,7 +12,7 @@ function AI(){
     rect(this.pos.x, this.pos.y, this.w, this.h)
   }
 
-  this.update = fucntion(){
+  this.update = function(){
     if(ball.pos.y<this.pos.y-this.h/2){
       this.acc.y-=this.spd;
     }else{

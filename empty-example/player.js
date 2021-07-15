@@ -17,7 +17,7 @@ function Player(){
   this.down = function(){this.acc.y+=this.spd;}
   this.stp = function(){this.acc.y = 0;}
 
-  this.update = fucntion(){
+  this.update = function(){
     this.acc.y = constrain(this.y, -this.maxSpd, this.maxSpd);
     this.pos.add(this.acc);
     this.pos.y = constrain(this.pos.y, 0, height-this.h);

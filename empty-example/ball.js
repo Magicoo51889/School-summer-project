@@ -16,7 +16,7 @@ function Ball(){
     ellipse(this.pos.x, this.pos.y, this.r*2);
   }
 
-  this.update = fucntion(){
+  this.update = function(){
     this.pos.add(this.acc);
 
     if(this.pos.y<this.r || this.pos.y>height-this.r){
@@ -70,7 +70,7 @@ function Ball(){
 
   this.res = function(){
     go = false;
-    ai.pos = createVector(width-ai.w*3, height/2-ai.h/2);)
+    ai.pos = createVector(width-ai.w*3, height/2-ai.h/2);
     player.pos = createVector(player.w*2, height/2-player.h/2);
 
     this.pos = createVector(width/2, height/2);
