@@ -78,6 +78,7 @@ function Ball(){
     do{
       this.acc = p5.Vector.random2D();
       this.acc.setMag(random(4, 6));
+   
     }while(abs(this.acc.x)<3 || abs(this.acc.y)<3);
   }
 }
